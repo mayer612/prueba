@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-brand-gray-light text-brand-black antialiased; margin: 0; }
+input, select, button { font: inherit; }
+
+/* Al imprimir / exportar a PDF: ocultar controles y dejar el reporte limpio */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
